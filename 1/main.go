@@ -28,7 +28,11 @@ func main() {
 		return
 	}
 
-	writer.WriteString(fmt.Sprintf("%d", nums[0]+nums[1]))
+	_, err = writer.WriteString(isT)
+	if err != nil {
+		panic(err)
+	}
+
 	writer.WriteByte('\n')
 
 }
